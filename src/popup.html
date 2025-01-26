@@ -4,10 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contest Viewer</title>
+    <link rel="stylesheet" href="output.css">
   </head>
-  <body>
-    <h1>Hello, thie is a contest Viewer</h1>
-    <button id="actionButton">Click Me</button>
+  <body class="w-full bg-gray-600 flex justify-center items-center">
+    <div class="border min-h-screen w-96 bg-teal-100">
+      <h1 class="text-center text-3xl mt-8 ">Contest Viewer</h1>
+
+      <div id="display-contests" class="h-full w-full px-4">
+        <div class="bg-neutral-600 w-full rounded-lg py-2 px-4 mt-4 text-white ">
+          CodeForces 1001 (Div1 + Div2)
+        </div>
+        <div class="bg-neutral-600 w-full rounded-lg py-2 px-4 mt-4 text-white ">
+          CodeChef Starters 172
+        </div>
+        <div class="bg-neutral-600 w-full rounded-lg py-2 px-4 mt-4 text-white ">
+          Atcoder Beginner Contest 200
+        </div>
+      </div>
+    </div>
+
+
     <script src="popup.js"></script>
   </body>
 </html>
