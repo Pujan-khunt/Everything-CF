@@ -4,17 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contest Viewer</title>
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="./output.css" />
   </head>
-  <body class="w-full bg-gray-600 flex justify-center items-center">
-    <div class="border min-h-screen w-96 bg-teal-100">
-      <h1 class="text-center text-3xl mt-8 ">Contest Viewer</h1>
 
-      <div id="display-contests" class="h-full w-full px-4">
+  <body class="min-h-screen bg-[#141021]">
+    <div id="container" class="w-96 p-3  ">
+
+      <div id="navbar" class="w-full flex items-center ">
+        <div class="flex-1">
+          <h1 class="text-white font-semibold text-2xl" id="heading">Everything CF</h1>
+        </div>
+
+        <div class="flex">
+          <button class="transform transition active:scale-110 ease-in-out cursor-pointer hover:text-amber-300  ml-2.5 text-2xl bg-blue-600 rounded-full px-2.5  flex justify-center items-center">&#x2302;</button>
+          <button class="transform transition active:scale-110 ease-in-out cursor-pointer hover:text-amber-300  ml-2.5 text-xl bg-blue-600 rounded-full px-2 py-1  flex justify-center items-center">&#128393;</button>
+          <button class="transform transition active:scale-110 ease-in-out cursor-pointer hover:text-amber-300  ml-2.5 text-xl bg-blue-600 rounded-full px-2.5 flex justify-center items-center">&#x2715;</button>
+        </div>
       </div>
-      <button id="getApi" class="bg-amber-400 px-4 py-2 rounded-lg border-none cursor-pointer transform active:scale-102 ">Click me</button>
-    </div>
+
+      <div id="home" class="px-4">
+        <div class="mt-6 bg-gray-900/80 p-4 rounded-xl border border-gray-700 relative">
+          <div class="flex items-center justify-center">
+              <h3 class="text-white text-lg font-semibold">CodeForces 1001 (Div.2)</h3>
+          </div>
     
-    <script src="popup.js"></script> 
+          <div class="mt-4 border-t border-gray-700 pt-4 text-center">
+            <p class="text-gray-400 text-sm"><span class="font-bold">Time: </span> January 28, 2025 | 17:35 IST</p>
+            <p class="text-gray-500 text-s mt-2">6:15:42:58</p>
+          </div>
+    
+          <div class="mt-4 flex items-center justify-between">
+            <div class="text-sm text-green-900 bg-green-600 px-4 py-2 rounded-lg ">Registration Open &#10004;</div>
+            <a class="px-4 py-1.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg shadow">Link</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="feedback" class="p-3 hidden">
+        <input id="" class="text-white p-3  resize-none outline-none bg-[#181828] w-full" ></input>
+        <div class="flex justify-center mt-6">
+          <button class="bg-linear-to-r from-[#f8f3d0] to-[#c2bced] px-3 py-1 rounded-xl cursor-pointer">Submit</button>
+        </div>
+      </div>
+
+    </div>
+    <script src="./popup.js"></script>
   </body>
 </html>
