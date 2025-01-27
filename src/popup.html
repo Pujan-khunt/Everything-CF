@@ -23,7 +23,7 @@
       </div>
 
       <div id="home" class="px-4">
-        <div class="mt-6 bg-gray-900/80 p-4 rounded-xl border border-gray-700 relative">
+        <div id="card" class="mt-6 bg-gray-900/80 p-4 rounded-xl border border-gray-700 relative">
           <div class="flex items-center justify-center">
               <h3 class="text-white text-lg font-semibold">CodeForces 1001 (Div.2)</h3>
           </div>
@@ -40,12 +40,12 @@
         </div>
       </div>
 
-      <div id="feedback" class="p-3 hidden">
-        <input id="" class="text-white p-3  resize-none outline-none bg-[#181828] w-full" ></input>
+      <form id="feedback" class="p-3">
+        <input placeholder="We value your feedback" id="" class="text-white p-3 rounded-lg resize-none outline-none bg-[#181828] w-full" ></input>
         <div class="flex justify-center mt-6">
-          <button class="bg-linear-to-r from-[#f8f3d0] to-[#c2bced] px-3 py-1 rounded-xl cursor-pointer">Submit</button>
+          <button type="submit" class="bg-linear-to-r from-[#f8f3d0] to-[#c2bced] px-3 py-1 rounded-xl cursor-pointer">Submit</button>
         </div>
-      </div>
+      </form>
 
     </div>
     <script src="./popup.js"></script>
