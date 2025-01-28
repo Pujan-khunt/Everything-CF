@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const exitBtn = document.querySelector('#exit-btn');
   const contestsDisplay = document.querySelector('#contests-display');
   const feedbackDisplay = document.querySelector('#feedback-display');  
+  const loadingPage = document.querySelector('#loading-page');
+  const mainContent = document.querySelector('#main-content');
   init();
   
   function init() {
@@ -30,8 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // Fetching CF API and getting details about the contest
   async function fetchContestList() {
     try {
+      // Loading page will appear here
+      loadingPage.classList.remove('hidden');
       const response = await fetch('https://codeforces.com/api/contest.list');
       const jsonData = await response.json();
+      // Loading page will disappear as all api is fetched
+      loadingPage.classList.add('hidden');
+      // Everything else will appear here
+      mainContent.classList.remove('hidden');
+      
       
       // jsonData.result is an array which contains information about every CF contest
       const allContests = jsonData.result;
