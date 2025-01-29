@@ -3,7 +3,7 @@
     "name": "Contest Viewer",
     "description": "View contests from various platforms and other details too.",
     "version": "1.0",
-    "permission": ["https://codeforces.com/*"],
+    "permissions": ["activeTab"],
     "action": {
         "default_popup": "popup.html",
         "default_icon": {

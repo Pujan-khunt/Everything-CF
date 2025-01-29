@@ -86,9 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
       
       contestsDisplay.appendChild(container);
-      setInterval(() => {
-        updateTimer(contest);
-      }, 1000);
+      setInterval(() => { updateTimer(container, contest); }, 1000);
     })
   }
   
@@ -119,15 +117,16 @@ document.addEventListener('DOMContentLoaded', () => {
       seconds: (Math.floor((difference / 1000) % 60)).toString().padStart(2, '0'),
       minutes: (Math.floor((difference / (1000 * 60)) % 60)).toString().padStart(2, '0'),
       hours: (Math.floor((difference / (1000 * 60 * 60)) % 24)).toString().padStart(2, '0'),
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      days: (Math.floor(difference / (1000 * 60 * 60 * 24))).toString().padStart(2, '0'),
     }
 
     return obj;
   }
 
-  function updateTimer(contest) {
-    const contestTimerDisplay = document.querySelector('#contest-timer-display');
+  function updateTimer(container, contest) {
+    const contestTimerDisplay = container.querySelector('#contest-timer-display');
     const remainingTime = getRemainingTime(contest);
+    console.log(remainingTime)
     contestTimerDisplay.innerHTML = `${remainingTime.days}:${remainingTime.hours}:${remainingTime.minutes}:${remainingTime.seconds}`;
   }
 })
